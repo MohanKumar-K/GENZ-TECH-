@@ -118,6 +118,9 @@ span{
 .sercards
 {
   margin-top:20px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
   
 }
 .displayfailure{
@@ -127,9 +130,12 @@ span{
   border-radius: 25px;
   float:left;
   margin:12px;
+  
   background-image:url('display failure.webp');
   background-size: 300px;
   background-repeat:no-repeat;
+
+  
   
 }
 .df{
@@ -201,11 +207,11 @@ width:300px;
   
 }
 .Abpara{
-  font-size:20px;
+  font-size:25px;
   color:white;
   width:300px;
   height:200px;
-  margin-left:590px;
+  margin-left:890px;
   margin-top:80px;
   text-align:center;
   
@@ -475,3 +481,4 @@ font-size:10px;
     font-size:15px;
     text-align:center;
   }
+}
