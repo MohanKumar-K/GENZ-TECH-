@@ -496,7 +496,7 @@ position: fixed;
 .sercards
 {
   margin-top:50px;
-  width:500px
+  
   display: flex;
   justify-content: space-between;
 
@@ -627,7 +627,7 @@ iframe{
 .sercards
 {
   margin-top:50px;
-  width:300px
+
   display: flex;
   justify-content: space-between;
 }
