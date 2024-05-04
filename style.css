@@ -5,12 +5,14 @@
  
 }
 body{
+  padding:0;
+  margin:0 ;
   background-color: #0e1313;
-  min-height:100vh;
-  overflow-x: hidden;
+  max-height:100vh;
+  overflow-x:hidden;
 }
 
-#main{
+.main{
   width:100%;
   max-height:100vh; 
 }
@@ -20,16 +22,17 @@ body{
   display:inline;
   width:50px;
   height:50px;
-  top:10px;
   margin-left:5px;
+  padding:10px 5px 2px 2px;
   
 }
 .titlename{
   display:inline;
   color:#fff;
- padding: 10px;
   font-size:35px;
-  position:relative;
+  position: relative;
+  bottom:8px;
+  padding:10px 5px 2px 2px;
   
 }
 .titlename:hover{
@@ -38,17 +41,25 @@ body{
 ul{
   list-style-type: none;
   float:right;
+
   
   
 }
+.navbar{
+display: inline;
+
+
+}
 a,li{
   float:left;
-  padding:8px;
   font-size:35px;
   color:white;
   text-decoration:none;
   text-align:center;
   justify-content:space-around;
+  margin-right:5px;
+  padding:5px;
+  
   
   
   
@@ -59,19 +70,21 @@ a:hover{
   cursor:pointer;
 }
 
-.head{
+.head2{
   background-image:url('headwallpaper.webp') ;
   width:100%;
-  height:600px;
+  height:720px;
  background-size:cover;
   background-repeat:no-repeat;
+
  
 }
 .firstpara{
    position: relative;
    color: white;
-   top: 200px;
+   top: 250px;
    margin-left:80px;
+  
    
  }
  b{
@@ -84,7 +97,7 @@ span{
 }
 .enquiry{
   margin-left:80px;
-  margin-top:220px;
+  margin-top:255px;
   border:none;
   width:200px;
   height:40px;
@@ -100,9 +113,8 @@ background-color:greenyellow;
 #Services{
   background-color:#0e1313;
   color:white;
-  height:600px;
+  height:720px;
   width:100%;
-  position:static;
   
   
   
@@ -111,13 +123,13 @@ background-color:greenyellow;
   color:white;
   text-align: center;
   margin-top:15px;
-  font-size:40px;
+  font-size:45px;
   
   
 }
 .sercards
 {
-  margin-top:20px;
+  margin-top:50px;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -130,12 +142,11 @@ background-color:greenyellow;
   border-radius: 25px;
   float:left;
   margin:12px;
+  margin-left:50px;
   
   background-image:url('display failure.webp');
   background-size: 300px;
   background-repeat:no-repeat;
-
-  
   
 }
 .df{
@@ -172,6 +183,7 @@ width:300px;
   float:left;
   border-radius: 25px;
   margin:12px;
+  margin-right:50px;
   
   background-image:url('power.jpg');
   
@@ -189,14 +201,12 @@ width:300px;
 }
 /*About*/
 #about{
-  position:relative;
-  top:90px;
   width:100%;
-  height:600px;
+  height:720px;
   background-image:url('about.webp');
   background-repeat:no-repeat;
   background-size: cover;
-  position:static;
+  
   
 }
 .Abhead{
@@ -220,7 +230,7 @@ width:300px;
 #contacts{
   background-color:#0e1313;
   color:white;
-  height:500px;
+  height:700px;
   width:100%;
   position:static;
   
@@ -232,14 +242,14 @@ width:300px;
 }
 iframe{
   margin-left:150px;
-  margin-top:40px;
+  margin-top:130px;
   border-radius:15px;
   display:inline;
 }
 .cinfo{
   width:400px;
   float:right;
-  margin-top:50px;
+  margin-top:130px;
   margin-right:150px;
   padding:10px;
   color:white;
@@ -307,6 +317,9 @@ footer{
  height:50px;
 border-radius:100%;
 background-color: #fff;
+position: fixed;
+ bottom: 20px;
+  right: 30px;
 
 }
 .backtop:hover{
@@ -314,89 +327,190 @@ background-color: #fff;
 }
 
 /* Mobile*/
-@media only screen and (max-width: 600px) {
-  *{
-    margin:0;
-    padding:0;
-  
-  }
-  #main{
+@media only screen and (max-width:1200px){
+
+  .main{
     width:100%;
-    overflow-x:hidden;
+    height:100vh;
+    overflow-x: hidden;
+    position:absolute;
+  }
+  .head2{
+
+   background-size:contain;
+   
+  }
+  .titlename{
+    font-size:30px; 
+   
+  }
+
+
+  .firstpara{
+    top: 200px;
+    margin-left:80px;  
+  }
+  b{
+    font-size:30px; 
+  }
+ span{
+   margin-top:50px;
+   font-size:25px;
+ }
+ .enquiry{
+  margin-left:70px;
+  margin-top:200px;
+  width:150px;
+  height:35px;
+  font-size:16px;
+}
+  #about{
+
+    background-size: contain;
+  }
+  .Abpara{
+    background-size:contain;
+    font-size:25px;
+    margin-left:650px;
+    position:sticky;
+    
+  }
+  #Services{
+    margin-top:-200px;
+
+  }
+  .Serhead{
+   
+    position: relative;
+  }
+
+  #contacts{
+    height:600px;
+    width:100%;
+    position:relative;
+    
   }
   
-.head{
-  width:100%;
-  height:300px;
-  background-size:cover;
-  position: sticky;
-}
-.logo{
- 
-  width:25px;
-  height:25px;
-  margin:5px;
+
+  .chead{
+    font-size:30px;
+    text-align:center;
+     
+  }
+  iframe{
+    margin-left:50px;
+    margin-top:50px;
+   
+  }
+  .cinfo{
+    margin-top:50px;
+    margin-right:50px;
+  }
   
-}
-.titlename{
- padding: 10px;
-  font-size:20px;
 
 }
-a,li{
-  font-size:20px;
-  padding:5px;
-}
-.firstpara{
-  top:80px;
-  margin-left:40px;
 
+@media only screen and (max-width:1024px){
+  .main{
+    width:100%;
+    height:100vh;
+    overflow-x: hidden;
+    position:absolute;
+  }
+  .head2{
+
+   background-size:contain;
+   height: 780px; 
+   
+   
+  }
+ 
+  #about{
+
+    background-size: contain;
+  
+  }
+  .Abpara{
+    background-size:contain;
+    font-size:18px;
+    margin-top:40px;
+    margin-left:440px;
+    position:sticky;
+    
+  }
+  .Abhead{
+    color:white;
+    font-size:30px;
+    text-align:center;
+    padding:20px;
+    
+  }
+  a,li{
+
+    font-size:25px;
+    padding:5px ;
+  }
+
+
+  .logo{
+    width:40px;
+    height:40px; 
+    padding:10px 5px 2px 2px; 
+  }
+  .titlename{
+    font-size:27px;
+    padding:10px 5px 2px 2px;   
+  }
+  .firstpara{
+    top: 150px;
+    margin-left:80px;  
+  }
+  b{
+    font-size:30px; 
+  }
+ span{
+   margin-top:50px;
+   font-size:25px;
+ }
+ .enquiry{
+  margin-left:80px;
+  margin-top:160px;
+  width:150px;
+  height:35px;
+  font-size:16px;
 }
-b{
-  font-size:25px;
-}
-span{
-  font-size:20px;
-}
-.enquiry{
-  margin-left:40px;
-  margin-top:90px;
-  border:none;
-  width:100px;
-  height:25px;
-  padding:5px;
-  border-radius:15px;
-  font-size:10px;
-  font-weight:bold;
-}
-/* servies */
 #Services{
-  height:400px;
-  width:100%; 
+  background-color:#0e1313;
+  color:white;
+  height:610px;
+  width:100%;
+  margin-top:-250px;
+  
+  
 }
 .Serhead{
-  color:white;
-  text-align: center;
-  font-size:25px;
-  margin-top:4px; 
+  margin-top:10px;
+  font-size:30px;
+  position: relative;
 }
 .sercards
 {
-  margin-top:10px;
-  width: 100%;
-  display:flex;
+  margin-top:50px;
+  width:500px
+  display: flex;
   justify-content: space-between;
+
 }
 .displayfailure{
   width:300px;
   height:300px;
   background-size:100% 100%;
-
 }
 .df{
-
   margin-top:300px;
   font-size:20px;
+  padding:10px;
+  
 }
 .motherboard{
 width:300px;
@@ -406,257 +520,365 @@ width:300px;
 }
 .mb{
   margin-top:300px;
-  font-size:20px;  
+  font-size:20px;
+  padding:10px;
+  
+ 
 }
 .power{
   width:300px;
   height:300px;
   background-size:100% 100%;
-  
 }
 .pw{
   margin-top:300px;
-  font-size:20px; 
-}
-#about{
-  width:100%;
-  height:300px;
-  margin-top:20px;
-  background-size:cover;
-}
-.Abhead{
-  font-size:25px;
+  font-size:20px;
   padding:10px;
   
-}
-.Abpara{
-  font-size:15px;
-  width:200px;
-  height:200px;
-  margin-left:300px;
-  margin-top:30px;
   
 }
-/*Contact Us*/
+.chead{
+  font-size:30px;
+  margin-top:-350px;
+}
 #contacts{
-  height:500px;
+  height:650px;
   width:100%;
+  position:relative;
+  
+}
+
+iframe{
+  margin-left:50px;
+  margin-top:30px;
+  display: block;
+  margin: 0% auto;
+ 
+}
+.cinfo{
+  position:absolute;
+  top:350;
+  bottom:0;
+  left:0;
+  right:0;
+  margin: auto;
+ 
+}
+}
+
+@media only screen and (max-width:768px){
+  
+  .main{
+    width:100vw;
+    height:100vh;
+    overflow-x: hidden;
+    position:relative;
+  }
+  .header{
+    background-color: #0e1313;
+  }
+  .navbar{
+    display: flex;
+    background-color:white;
+    justify-content:space-evenly;
+  }
+ 
+  a,li{
+    color:#0e1313;
+    font-size:20px;
+    font-weight: bolder;
+  }
+  .logo{
+    width:35px;
+    height:35px; 
+  }
+  .titlename{
+    font-size:22px;  
+  }
+  .firstpara{
+    top: 140px;
+    margin-left:50px;  
+  }
+  b{
+    font-size:20px; 
+  }
+ span{
+   margin-top:50px;
+   font-size:18px;
+ }
+ .enquiry{
+  margin-left:50px;
+  margin-top:140px;
+  width:100px;
+  height:25px;
+  font-size:12px;
+  padding:2px;
+}
+#Services{
+  height:550px;
+  width:100%;
+  margin-top:-450px;
+}
+.Serhead{
+  margin-top:10px;
+  font-size:25px;
+  position: relative;
+}
+.sercards
+{
+  margin-top:50px;
+  width:300px
+  display: flex;
+  justify-content: space-between;
+}
+.df a{
+  margin-top:-45px;
+  font-size:20px;
+  padding:10px;
+  color: #fff;
+  
+}
+.mb a{
+  margin-top:-45px;
+  font-size:20px;
+  padding:10px;
+  color: #fff;
+  
+ 
+}
+.pw a{
+  margin-top:-45px;
+  font-size:20px;
+  padding:10px;
+  color: #fff;
+  
+  
+}
+.displayfailure{
+  width:250px;
+  height:250px;
+  margin:6px;
+  background-size:100% 100%;
+}
+.motherboard{
+  width:250px;
+  height:250px;
+  margin:6px;
+  background-size:100% 100%;
+}
+.power{
+  width:250px;
+  height:250px;
+  margin:6px;
+  background-size:100% 100%;
+}
+
+#about{
+
+  background-size:contain;
+
+}
+.Abpara{
+  background-size:contain;
+  font-size:15px;
+  display: flex;
+  margin: 25px auto;
+  justify-content:center;
+  
+}
+.Abhead{
+  color:white;
+  font-size:25px;
+  text-align:center;
+  padding:20px;
   
 }
 .chead{
   font-size:25px;
-  text-align:center;
-  padding:20px;
+  margin-top:-350px;
 }
-iframe{
-  margin-left:110px;
-  border-radius:15px;
-  display:block;
-}
-.cinfo{
- width:100%;
- float:left;
- margin-left:110px;
-}
-.topbutton{
+#contacts{
+  height:650px;
   width:100%;
   position:relative;
-  left:490px;
-  bottom:100px ;
-  cursor: pointer;
-
 }
+
 .backtop{
- width:50px;
- height:50px;
- border-radius:100%;
+ width:40px;
+ height:40px;
+  right: 15px;
+} 
+a:hover{
+  color:rgb(67, 0, 0);
+  border-radius:10px;
+  cursor:pointer;
 }
 
-footer{
-  padding:5px 0px 2px 0px;
 }
 
-
-
-
-}
-
-/*@media only screen and (max-width: 768px) {
-  #main{
+@media only screen and (max-width: 480px) {
+  *{
+    padding:0;
+    margin:0;
+    
+  }
+  
+  .main{
     width:100%;
-    max-height:100vh;
-    
+    height:100vh;
+    overflow-x: hidden;
+    position:absolute;
   }
-  .logo {
-    width: 30px;
-    height: 30px;
-    
-   
-  }
-.titlename{
-  font-size:20px;
-  
- 
-}
-.head{
-  width:100%;
-  height:250px;
-}
+  .head2{
+    height:960px;
+   background-image:url(mobilehead2.avif);
+   background-size:contain;
+   position:static;
 
-a,li{
+  }
+.navbar{
+  display:flex;
+  justify-content: center;
+}
+  a,li{
+    font-size:14px;
+  }
+  .logo{
+    width:30px;
+    height:30px; 
+  }
+  .titlename{
+    font-size:20px;  
+  }
+  .firstpara{
+  position: relative;
+  top:200px;
+  
+  }
+  b{
+    font-size:25px;
+     
+  }
+ span{
+   font-size:15px;
+
+ }
+ .enquiry{
+  margin-top:200px;
+  margin-left:40px;
+  width:120px;
+  height:30px;
   font-size:15px;
-  font-weight:bold;
-  float:left;
-  padding:4px;
-  margin-top:5px;
-  margin-left:5px;
-  margin-bottom:5px;
-  
+  padding:2px;
 }
-ul{
-  float:left;
- 
-}
-.firstpara{
-  font-size:10px;
-  top:50px;
-  margin-left:20px;
-}
-b{
-  font-size:13px;
-}
-span{
-  font-size:11px;
-}
-.enquiry{
-  margin-top:48px;
-  width:65px;
-  height:2px;
-  padding:8px;
-  padding-bottom:20px;
-  font-size:11px;
-  font-weight:bold;
-  margin-left:25px;
-  border-radius:26px;
-  
-  
+#Services{
+  height:1100px;
+  width:100%;
+  margin-top:-450px;
+  position:relative;
 }
 .Serhead{
-  text-align:center;
-  font-size:20px;
-  
-  padding:20px;
-}
-.sercards{
   margin-top:10px;
-  display:flex;
-  justify-content:space-between;
+  font-size:23px;
+  position:relative;
+  margin:30px;
+}
+.sercards
+{
+  display: block;
+  position:static;
+  margin: auto 0px ;
+  display:grid;
+  place-content:center;  
 }
 .displayfailure{
-  width:200px;
-  height:250px;
-  background-size:200px;
-  margin-left:80px;
+  width:250px;
+  height:300px;
+  background-size:100% 100%;
+  margin-bottom:40px;
 }
-.df{
-  text-align:center;
-  
-  font-size:15px;
-  margin-top:250px;
-  cursor:pointer;
-  position:relative;
-  margin-left:40px;
 
+
+.motherboard{
+  width:250px;
+  height:300px;
+  background-size:100% 100%;
+  margin-bottom:40px;
+  
+
+}
+.power{
+  width:250px;
+  height:300px;
+  background-size:100% 100%;
+  margin-bottom:40px;
+}
+.df,.mb,.pw{
+  margin-top:330px;
+  padding:5px;
+}
+#about{
+  background-image:url(aboutus2.jpg);
+  background-size:100% 100%;
+
+}
+.Abpara{
+  background-size:contain;
+  font-size:15px;
+  display: flex;
+  margin: 25px auto;
+  justify-content:center;
+  
+}
+.Abhead{
+  color:white;
+  font-size:23px;
+  text-align:center;
+  padding:20px;
+  
+}
+.chead{
+  font-size:23px;
+  margin-top:-350px;
+}
+#contacts{
+  height:650px;
+  width:100%;
+  position:relative;
+}
+
+iframe{
+  width:250px;
+  height:25 0px;
+  margin-left:50px;
+  margin-top:30px;
+  display: block;
+  margin: 0% auto;
  
 }
-  .motherboard{
-  width:200px;
-  height:250px;
-  background-size:200px 250px;
-  margin-top:25px;
-  margin-left:80px;
-   
-  }
-  .mb{
-   text-align:center;
-  
-  font-size:15px;
-  margin-top:250px;
-  cursor:pointer;
-  position:relative;
-  margin-left:6px; 
-  }
-  .power{
-    width:200px;
-  height:250px;
-  background-size:200px;
-  margin-left:80px;
-  margin-top:40px;
-  }
-  .pw{
-    text-align:center;
-  
-  font-size:15px;
-  margin-top:250px;
-  cursor:pointer;
-  position:relative;
-  margin-left:40px;
-  }
-  #about{
-    width:100%;
-    height:185px;
-    margin-top:390px;
-    background-size:contain;
-    
-  }
-  .Abhead{
-    position:relative;
-   font-size:18px;
-   margin-top:10px;
-   padding:10px;
-  
-  }
-  .Abpara{
-    text-align:center;
-    width:200px;
-    height:200px;
-    margin:auto;
-    position:relative;
-    left:70px;
-    font-size:10px;
-  }
-  #contacts{
-    width:100%;
-    height:680px;
-  position:relative;
-  
-   
-  }
-  .chead{
-    
-    margin-top:10px;
-    font-size:20px;
-    position:relative;
-   
-  }
-  iframe{
-    width:280px;
-    height:250px;
-    margin-left:40px;
-    
-  }
-  .cinfo{
-    width:300px;
-    height:260px;
-    margin-right:20px;
-   
-  }
-  .mp{
-font-size:10px;
-  }
-  
-  footer{
-    font-size:15px;
-    text-align:center;
-  }
+.cinfo{
+  position:absolute;
+  top:350;
+  bottom:0;
+  left:0;
+  right:0;
+  margin:auto 25px;
+}
+.lp,.mp,.cp,.tp{
+  width:16px;
+}
+.lpara,.mpara,.cpara,.tpara{
+  font-size:12px;
+}
+footer{
+  font-size:10px;
+}
+
+.backtop{
+ width:35px;
+ height:35px;
+  right: 15px;
+} 
+
+
 }

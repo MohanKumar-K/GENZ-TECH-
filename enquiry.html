@@ -6,8 +6,10 @@
     <title>Enquiry Form</title>
     <style>
         body {
+        background-image:url(enquirybg.avif);
             font-family: Arial, sans-serif;
-            background-color: #0e1313;
+         background-repeat: no-repeat;
+         background-size: 100% 100%;
             margin: 0;
             padding: 0;
             display: flex;
@@ -16,7 +18,7 @@
             height: 100vh;
         }
 
-        form {
+        .container{
             background-color: #fff;
             padding: 20px;
             border-radius: 8px;
@@ -46,12 +48,23 @@
         }
 
         button:hover {
-            background-color: #0e1313;
+            background-color: #495656;
+        }
+        .cancelbutton{
+            background-color: #fff;
+            display:inline;
+            float:left;
+            position: relative;
+         left:70px;
+         bottom:36px;
+
+        
         }
     </style>
 </head>
 <body>
-
+<div class="container">
+    
     <form>
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" required>
@@ -64,11 +77,16 @@
             <!-- Add more options as needed -->
         </select>
 
-        <label for="timing">Preferred Timing:</label>
-        <input type="text" id="timing" name="timing" placeholder="E.g., Monday 2:00 PM" required>
+        <label for="timing">Preferred Date&Time:</label>
+        <input type="date" id="timing" name="timing" required>
+        <input type="time" id="timing" name="timing" required >
 
         <button type="submit">Book</button>
+    
     </form>
-
+    <div class="cancelbutton">
+        <a href="index.html" target="_self"><button>Cancel</button></a>
+    </div>
+    </div>
 </body>
 </html>
