@@ -734,11 +734,7 @@ iframe{
 .backtop:hover{
   background-color: greenyellow;
 }
-a:hover{
-  color:rgb(67, 0, 0);
-  border-radius:10px;
-  cursor:pointer;
-}
+
 
 }
 
@@ -906,6 +902,4 @@ footer{
   right: 15px;
   border:2px solid white;
 } 
-
-
 }
